@@ -1,0 +1,227 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body.dark {
+  color: #fff;
+  background-color: #202C36;
+}
+.container {
+  max-width: 375px;
+  font-family: 'Nunito Sans';
+  padding: 30px 16px 60px 16px;
+  margin-inline: auto;
+}
+.header {
+  padding: 24px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  h3 {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: left;
+
+  }
+}
+.input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.37px;
+    text-align: left;  
+  }
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+.back-btn {
+  border-radius: 2px;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 0px 0px 7px 0px #0000004B;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 64px;
+}
+.inner {
+  border: none;
+  display: flex;
+  gap: 8px;
+  padding: 6px 24px;
+}
+.filter-part {
+  display: grid;
+  gap: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  
+  input {
+    width: 343px;
+    height: 48px;
+    border-radius: 5px;
+    padding: 14px 154px 14px 74px;
+    box-shadow: 0px 2px 9px 0px #0000000E;
+  }
+  select {
+    width: 200px;
+    height: 48px;
+    padding: 14px 24px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+  }
+}
+.cards {
+  display: grid;
+  gap: 40px;
+}
+.card {
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 8px;
+
+  }
+}
+.country-detail {
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30.01px;
+    margin-top: 44px;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+
+@media(width >= 1200px) {
+  .container {
+    min-width: 1200px;
+    padding: 23px 80px 45px 80px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 75px;
+  }
+  .header {
+    margin-bottom: 72px;
+    h3 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 32.74px;
+      
+    }
+  }
+  .input {
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 21.82px;
+    }
+  } 
+  .filter-part {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; 
+    input {
+      width: 480px;
+      height: 56px;
+      border-radius: 5px;
+      border-color: #fff;
+      box-shadow: 0px 2px 9px 0px #0000000E;
+    }
+    select {
+      width: 200px;
+      height: 56px;
+      padding: 14px 24px;
+      border-radius: 5px;
+      border-color: #fff;
+      margin-bottom: 48px;
+    }
+    .card img {
+      width: 264px;
+      height: 160px;
+    }
+  }
+  .back-btn {
+    margin-block: 80px;
+  }
+  .detail {
+    display: flex;
+    gap: 144px;
+    align-items: start;
+  }
+  .flag-img img {
+    width: 560px;
+    height: 401px;
+  }
+}
