@@ -55,9 +55,9 @@ export default function App() {
             />
           </label>
           {theme === 'dark' ? (
-            <img src="./public/img/dark-mode.svg"  />
+            <img src="./img/dark-mode.svg"  />
           ) : (
-            <img src="./public/img/light-mode.svg"  />
+            <img src="./img/light-mode.svg"  />
           )}
         </div>
       </div>
